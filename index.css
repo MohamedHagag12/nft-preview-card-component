@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --font:18px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-BG);
+    color: hsl(0, 0%, 100%);
+    font-size: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh);
+    flex-direction: column;
+}
+.card {
+    width: 350px;
+    background-color: var(--very-dark-blue-card-BG);
+    padding: 20px;
+    border-radius: 10px;
+}
+.image{
+    position: relative;
+}
+.image img{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+    background-color: rgba(0, 255, 247, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.image:hover .overlay {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+p {
+    color: var(--soft-blue);
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.info .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyan);
+}
+
+.info .price p {
+    color: var(--cyan);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.info .price img
+{
+    width: 15px;
+}
+.info .time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--soft-blue);
+}
+
+.info .time img
+{
+    width: 15px;
+}
+
+
+.info .time p {
+    color: var(--soft-blue);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+hr {
+    border: 1px solid var(--very-dark-blue-line);
+    margin-bottom: 20px;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--soft-blue);
+}
+
+.creator img
+{
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.creator p {
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.creator p span {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+
+@media (max-width:431px) {
+    .card {
+        width: 90%;
+    }
+
+    
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .info .price p {
+        font-size: 12px;
+    }
+
+    .info .time p {
+        font-size: 12px;
+    }
+
+    .creator p {
+        font-size: 12px;
+    }
+
+    .creator img
+    {
+        width: 25px;
+    }
+
+    
+
+}
+
